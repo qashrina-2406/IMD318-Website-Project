@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<! - - - This is Style (external) - - ->
+	<link rel="stylesheet" href="styles.css">
+	<title> Index Style 2 </title>
+
+<style>
+	/* Tambahan untuk slideshow & friends gallery */
+	.slideshow-container {
+	  max-width: 800px;
+	  position: relative;
+	  margin: auto;
+	  overflow: hidden;
+	}
+
+	.slides {
+	  display: none;
+	  width: 100%;
+	  height: 400px;
+	  object-fit: cover;
+	}
+
+	/* Tombol prev/next */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -22px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 18px;
+	  background-color: rgba(0,0,0,0.5);
+	  border-radius: 3px;
+	  user-select: none;
+	}
+	.next { right: 0; }
+	.prev { left: 0; }
+
+	/* Gallery bawah */
+	.friends-section {
+	  max-width: 800px;
+	  margin: 40px auto;
+	}
+	.friends-section h3 {
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+	.friends-gallery {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 10px;
+	  justify-content: center;
+	}
+	.friends-gallery img {
+	  width: 150px;
+	  height: 150px;
+	  object-fit: cover;
+	  border-radius: 8px;
+	}
+
+	.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #FFE4E1;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #FF69B4;
+}
+
+	</style>
+
+</head>
+<! - - - This is Body - - ->
+<body>
+<h1> QASH'S PERSONAL WEBSITE </h1>
+<nav>
+	<a href= "index2.html"> Home </a>
+	<a href= "aboutme.html"> About Me </a>
+	<a href= "family.html"> Family </a>
+	<a href= "education.html"> Education </a>
+	<a href= "experience.html"> Experience </a>
+    <a href= "friends.html"> Friends </a>
+	<a href= "favourites.html"> Favourites </a>
+	<a href= "gallery.html"> Gallery </a>
+</nav>
+
+<! - - - WEBSITE CONTENT HERE - - ->
+
+<div class="content">
+	<h2> Friends! </h2>
+	<p> In this page I will introduced my friends from high school until my university life. This is most of my friends that I have made memories with. There is also other friends that is not features here because lack of pictures. Eventhough there is not a lot of picture, I still hope you will enjoy this page as much as I do.</p>
+	
+
+	<!-- Slideshow -->
+	<div class="slideshow-container">
+	  <img class="slides" src="dip14.jpg" alt="Friend 1">
+	  <img class="slides" src="gambarsekolah2.jpg" alt="Friend 2">
+	  <img class="slides" src="dip1.jpg" alt="Friend 3">
+
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+<!-- Dots Indicator -->
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+	<!-- Diploma Friends -->
+	<div class="friends-section">
+	  <h3>Diploma Friends</h3>
+	  <p> In this section I present to you some pictures of my friends that I have made during my diploma studies. In this section I present to you the pictures of my close friends and classmate.</p>
+	  <div class="friends-gallery">
+		<img src="dip2.jpg" alt="">
+		<img src="dip6.jpg" alt="">
+		<img src="dip8.jpg" alt="">
+		<img src="dip10.jpg" alt="">
+		<img src="dip5.jpg" alt="">
+		<img src="dip7.jpg" alt="">
+		<img src="dip9.jpg" alt="">
+		<img src="dip11.jpg" alt="">
+		<img src="dip12.jpg" alt="">
+		<img src="dip13.jpg" alt="">
+		<img src="dip15.jpg" alt="">
+	  </div>
+	</div>
+
+	<!-- Highschool Friends -->
+	<div class="friends-section">
+	  <h3>Highschool Friends</h3>
+	  <p> This is my friends from high school!. I couldn't show you more pictures because we rarely take picture together at that time and most of the pictures already been deleted. Eventhough the pictures have been deleted the memories that we made together never been deleted from my memories. So I just present to you some of the pictures that I still have.
+	  <div class="friends-gallery">
+		<img src="gambarsekolah1.jpg" alt="">
+		<img src="gambarsekolah3.jpg" alt="">
+		<img src="image3.jpg" alt="">
+		<img src="gambarsekolah4.jpg" alt="">
+	  </div>
+	</div>
+</div>	
+
+<!-- Slideshow Script -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("slides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  for (let i = 0; i < slides.length; i++)
+    slides[i].style.display = "none";
+
+  for (let i = 0; i < dots.length; i++)
+    dots[i].classList.remove("active");
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+}
+</script>
+
+	
+</div>	
+
+<! - - - This is Footer - - ->
+	<footer class="footer">
+		<p>&copy; 2025 This website is for educational purposes only | Nur Qashrina Norshorafendi </p>
+		<div id="date-time"></div>
+</footer>
+
+<script>
+function updateDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString('ms-MY'); 
+    const time = now.toLocaleTimeString('ms-MY');
+
+    document.getElementById('date-time').innerHTML = date + " | " + time;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

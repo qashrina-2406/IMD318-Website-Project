@@ -1,0 +1,201 @@
+/* General Styling */
+body{
+	font-family: Arial, sans-serif;
+	background-color: #FFF0F5;
+	margin:0;
+	padding:0;
+}
+
+/*Heading*/
+h1 {
+	text-align: center;
+	color: #FF69B4;
+	margin: 20px 0;
+}
+
+/* Navigation Bar */
+nav {
+	background: #FF69B4;
+	width: 800px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	padding: 5px 10px;
+	border-radius: 22px;
+	box-shadow: 2px 2px 20px rgba(0,0,0,0,3);
+}
+
+nav > a{
+	color: white;
+	text-decoration: none;
+	padding: 8px 16px;
+	border-radius: 22px;
+	transition: background 0.25s, color 0.25s;
+}
+
+nav > a:hover{
+	background: #FF1493;
+	color:white;
+}
+
+/*Website Content */
+.content{
+	background: #FFFAFA;
+	color: #FF69B4;
+	width:80%;
+	max-width: 800px;
+	margin: 40px auto 100px auto;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 2px 2px 15px rgba(0,0,0,0,2);
+	text-align: center;
+	transition: background 0.25s, color 0.25s;
+}
+
+.content h2{
+	margin-bottom: 15px;
+	color:#FF69B4;
+}
+
+/*Footer Styling*/
+.footer {
+	background:#FF69B4;
+	color: #FFF0F5;
+	text-align: center;
+	padding: 15px 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top: 3px solid rgb(56,130,209)
+	font-size: 0.9em;
+	box-shadow: 0 -2px 10px rgba(0,0,0,0,3);
+	position:fixed;
+}
+
+.footer p {
+	margin: 0;
+}
+
+/* ===== FIX OVERRIDE UNTUK FAMILY-CARD ===== */
+
+/* Buang style default dari content */
+.family-card {
+    color: black !important;
+}
+
+/* Pastikan gambar tak ikut style global */
+.family-card img {
+    all: unset;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Pastikan family-card ikut design modern */
+.family-card {
+    background: #fff7fc !important;
+    width: 45%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
+    border: 2px solid #ffd3e6;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Caption fix */
+.caption {
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF4FA7;
+    text-align: center;
+}
+
+/* IG Highlight Dreamy Soft Image */
+.family-card img {
+    width: 100%;
+    aspect-ratio: 1/1;         /* square */
+    object-fit: cover;         
+    border-radius: 35px;       /* soft round IG highlight shape */
+    box-shadow:
+        inset 0 0 35px rgba(255, 255, 255, 0.5),
+        0 8px 25px rgba(255, 105, 180, 0.25);
+    transition: 0.3s ease;
+    display: block;
+}
+
+/* Hover dreamy effect */
+.family-card img:hover {
+    transform: scale(1.03);
+    box-shadow:
+        inset 0 0 45px rgba(255, 255, 255, 0.55),
+        0 12px 35px rgba(255, 105, 180, 0.35);
+}
+
+#date-time {
+    font-weight: bold;
+}
+
+/* Popup background blur */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup box */
+.popup-box {
+    background: #ffe6f3;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+.popup-box h2 {
+    color: #ff4fa7;
+    margin-bottom: 15px;
+}
+
+.popup-box input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ff8ac9;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.popup-box button {
+    background: #ff4fa7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.popup-box button:hover {
+    background: #ff69b4;
+}
+
+/* Welcome text */
+.welcome-text {
+    text-align: center;
+    font-size: 22px;
+    color: #ff4fa7;
+    font-weight: bold;
+    margin-top: 15px;
+}
